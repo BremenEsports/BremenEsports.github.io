@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=/index.html">
+    <script>
+        // For GitHub Pages and static hosts: redirect all sub-routes to index.html
+        if (window.location.pathname !== "/" && window.location.pathname !== "/index.html") {
+            window.location.replace("/index.html");
+        }
+    </script>
+    <title>Redirecting...</title>
+    <style>
+        body { background: #222; color: #fff; font-family: Arial, sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+        .msg { text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="msg">
+        <h1>Redirecting…</h1>
+        <p>If you are not redirected, <a href="/index.html">click here</a>.</p>
+    </div>
+</body>
+</html>
