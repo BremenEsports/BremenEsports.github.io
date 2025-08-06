@@ -86,6 +86,35 @@
             height: 32px;
             display: block;
         }
+        .footer {
+            margin-top: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+        .footer-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+        .footer-link:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -106,5 +135,13 @@
             </a>
         </div>
     </div>
+    
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="impressum.html" class="footer-link">Impressum</a>
+            <a href="satzung.html" class="footer-link">Satzung</a>
+            <a href="datenschutz.html" class="footer-link">Datenschutzerklärung</a>
+        </div>
+    </footer>
 </body>
 </html>
