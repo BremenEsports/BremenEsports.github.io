@@ -1,0 +1,10 @@
+/* Shared fonts for Bremen eSports e.V. */
+@font-face {
+  font-family: 'Evogria Italic';
+  src: url('fonts/evogria_italic.woff2') format('woff2'),
+       url('fonts/evogria_italic.woff') format('woff'),
+       url('fonts/evogria_italic.ttf') format('truetype');
+  font-style: normal; /* iOS/Safari font matching is strict */
+  font-weight: normal;
+  font-display: swap; /* faster text rendering */
+}

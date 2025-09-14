@@ -5,15 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Coming soon - Bremen eSports e.V.</title>
     <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+    <link rel="stylesheet" href="public/styles.css">
     <style>
-        @font-face {
-            font-family: 'Evogria Italic';
-            src: url('public/fonts/evogria_italic.woff2') format('woff2'),
-                 url('public/fonts/evogria_italic.woff') format('woff'),
-                 url('public/fonts/evogria_italic.ttf') format('truetype');
-            font-style: italic;
-            font-weight: normal;
-        }
         body {
             background: #222 url('public/background-hbes.png') no-repeat center center fixed;
             background-size: cover;
@@ -64,6 +57,20 @@
             display: flex;
             gap: 1.2rem;
             justify-content: center;
+        }
+        /* Grid to make CTA span exactly the width of the 3 buttons */
+        .cta-grid {
+            display: inline-grid;
+            grid-template-columns: max-content max-content max-content;
+            column-gap: 1.2rem;
+            row-gap: 1rem;
+            margin-top: 2rem;
+        }
+        .cta-grid .cta {
+            grid-column: 1 / -1;
+            justify-self: stretch; /* fill exactly the grid width */
+            text-align: center;
+            box-sizing: border-box; /* include padding in width to avoid overflow */
         }
         .social-btn {
             padding: 0.7rem 1.6rem;
@@ -123,7 +130,8 @@
         <div class="icon">🚧</div>
         <h1>Coming soon!</h1>
         <p>Wir arbeiten gerade an einem neuen Webauftritt für euch!</p>
-        <div class="button-group">
+        <div class="cta-grid">
+            <a href="mitglied-werden.html" class="social-btn cta" title="Mitgliedsantrag">Mitglied werden</a>
             <a href="https://discord.gg/aB5tBTw89v" target="_blank" class="social-btn discord" title="Discord">
                 <img src="public/discord-white-icon.webp" alt="Discord" class="icon-img">
             </a>
@@ -141,7 +149,6 @@
             <a href="impressum.html" class="footer-link">Impressum</a>
             <a href="satzung.html" class="footer-link">Satzung</a>
             <a href="datenschutz.html" class="footer-link">Datenschutzerklärung</a>
-        </div>
     </footer>
 </body>
 </html>
